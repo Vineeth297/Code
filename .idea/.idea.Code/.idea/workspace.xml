@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Done with Curves" />
+    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="l">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641836044256</updated>
       <workItem from="1641836081876" duration="7260000" />
-      <workItem from="1641845160592" duration="66000" />
+      <workItem from="1641845160592" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="Done with Curves">
       <created>1641844923996</created>
@@ -96,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641844923996</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="l">
+      <created>1641845238749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641845238749</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +129,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Done with Curves" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with Curves" />
+    <MESSAGE value="l" />
+    <option name="LAST_COMMIT_MESSAGE" value="l" />
   </component>
   <component name="WindowStateProjectService">
     <state x="823" y="402" key="#Notifications" timestamp="1641845009748">
