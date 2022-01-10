@@ -19,23 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Done with Curves">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FunctionLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FunctionLibrary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Graph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Graph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader/Point URP.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Point URP.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -102,8 +88,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1641836044256</updated>
-      <workItem from="1641836081876" duration="7087000" />
+      <workItem from="1641836081876" duration="7233000" />
     </task>
+    <task id="LOCAL-00001" summary="Done with Curves">
+      <created>1641844923996</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641844923996</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,8 +119,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Done with Curves" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done with Curves" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="823" y="402" key="#Notifications" timestamp="1641845009748">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="823" y="402" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1641845009748" />
     <state x="630" y="353" key="LayersDialog" timestamp="1641844722962">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -140,5 +140,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1641844848618" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1641844934178">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1641844934178" />
   </component>
 </project>
