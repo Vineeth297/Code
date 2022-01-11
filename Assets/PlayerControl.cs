@@ -4,63 +4,81 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-	[Range(1,10)]
+	[Range(1,500)]
 	[SerializeField] private float _speed = 1f;
 
+	[SerializeField] private float fallMultiplier = 0.2f;
+	[SerializeField] private float lowJumpMultipler = 2f;
 	[SerializeField] private float _jumpForce = 2f;
+	
 	[SerializeField] private Transform _groundCheck;
 
-	private Rigidbody _rb;
-	[SerializeField]private bool _isGrounded;
+	[SerializeField] private bool _isGrounded;
 
-	private float _velocity;
-	private float _gravity = -9.81f;
-	private float _gravityScale = 5;
-	private float _distanceToCheck = 0.05f;
+	private float movementX;
+
+	private Rigidbody _rb;
+
 	private void Start()
 	{
+		_isGrounded = true;
 		_rb = GetComponent<Rigidbody>();
 	}
 
 	void Update()
 	{
-		_velocity += _gravity * _gravityScale * Time.deltaTime;
-		
-		IsPlayerOnGround();
-		
-		if (Input.GetKey("right"))
-		{
-			transform.Translate(Vector3.right * (_speed * Time.deltaTime));
-		}
-		
-		if (Input.GetKey("left"))
-		{
-			transform.Translate(Vector3.left * (_speed * Time.deltaTime));
-		}
+		movementX = Input.GetAxis("Horizontal");
+		RealisticGravity();
 
-		if (_isGrounded && _velocity < 0)
-		{
-			_velocity = 0;
-		}
+		IsPlayerOnGrounded();
+		
+		Vector3 movement = new Vector3(movementX,0f,0f);
+		_rb.AddForce(movement * (_speed));
+		// if (Input.GetKey("right"))
+		// {
+		// 	transform.Translate(transform.TransformDirection(transform.right * (_speed * Time.deltaTime)), Space.World);
+		// }
+		//
+		// if (Input.GetKey("left"))
+		// {
+		// 	transform.Translate(-transform.TransformDirection(transform.right * (_speed * Time.deltaTime)), Space.World);
+		// }
 
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (_isGrounded)
 		{
-			_velocity = _jumpForce;
+			if (Input.GetKeyDown("up"))
+			{
+				_rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+				FlipCube();
+				_isGrounded = false;
+			}
 		}
-
-		transform.Translate(new Vector3(0, _velocity, 0) * Time.deltaTime);
 	}
 
-	void IsPlayerOnGround()
+	void IsPlayerOnGrounded()
 	{
-		if (Physics2D.Raycast(transform.position, Vector2.down, _distanceToCheck))
+		if (Physics.Raycast(_groundCheck.position, Vector3.down, out var hit,10f))
 		{
-			_isGrounded = true;
-		}
-		else
-		{
-			_isGrounded = false;
-		}
+			if (Vector3.Distance(_groundCheck.position, hit.point) < 0.15f)
+				_isGrounded = true;
+			else
+				_isGrounded = false;
+		} 
+		Debug.DrawLine(transform.position + (Vector3.down * 0.5f), hit.point);
 	}
-	
+
+	void RealisticGravity()
+	{
+		if (_rb.velocity.y < 0f)
+			_rb.velocity += Vector3.up * (Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
+		else if (_rb.velocity.y > 0f)
+			_rb.velocity += Vector3.up * (Physics.gravity.y * (lowJumpMultipler - 1) * Time.deltaTime);
+	}
+
+	void FlipCube()
+	{
+		transform.Rotate(Vector3.forward * 45f);
+	}
 }
+
+
