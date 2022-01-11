@@ -11,38 +11,39 @@ public class Graph : MonoBehaviour
 	[SerializeField] FunctionLibrary.FunctionEnum function;
 
 	private Transform[] points;
-	
-	
+
 	void Awake()
 	{
-		points = new Transform[resolution];
+		points = new Transform[resolution * resolution];
 		float step = 2f / resolution;
 		var scale = Vector3.one * step;
-		Vector3 position = Vector3.zero;
-		for (int i = 0; i < points.Length; i++)
+		
+		for (int i = 0,x = 0, z = 0; i < points.Length; i++, x++)
 		{
-			Transform pointTranform = points[i] = Instantiate(pointPrefab);
+			Transform pointTranform = Instantiate(pointPrefab);
 			pointTranform.localScale = scale;
-			position.x = (i + 0.5f) * step - 1f;
-			position.y = position.x * position.x ;
-			pointTranform.localPosition = position;
 			pointTranform.SetParent(transform,false);
+			points[i] = pointTranform;
 		}
 	}
 	
 	void Update()
 	{
+		float step = 2f / resolution;
+		float v = 0.5f * step - 1f;
 		
-		for (int i = 0; i < points.Length; i++)
+		for (int i = 0,x = 0,z = 0; i < points.Length; i++, x++)
 		{
-			Transform point = points[i];
-			Vector3 position = point.localPosition;
-			//position.y = f(position.x, Time.time);
-			position.y = FunctionLibrary.GetFunction(function)
-				(position.x, Time.time);
-			point.localPosition = position;
+			if (x == resolution)
+			{
+				x = 0;
+				z += 1;
+				v = (z + 0.5f) * step - 1f;
+			}
+			
+			float u = (x + 0.5f) * step - 1f;
+			
+			points[i].localPosition = FunctionLibrary.GetFunction(function)(u,v, Time.time);
 		}
-		
 	}
-	
 }
