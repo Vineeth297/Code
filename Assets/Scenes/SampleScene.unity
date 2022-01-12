@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.285027, g: 0.37139416, b: 0.4960121, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502706, g: 0.37139422, b: 0.49601433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  fallMultiplier: 3
+  fallMultiplier: 0.2
   lowJumpMultipler: 2
   _jumpForce: 8
   _groundCheck: {fileID: 1280915896}
@@ -232,14 +232,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100371393}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1280915896}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!54 &100371399
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966986001}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62748889b9132804aa360f62aafba442, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4

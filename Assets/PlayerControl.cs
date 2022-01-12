@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
 		_rb = GetComponent<Rigidbody>();
 	}
 
-	void Update()
+	private void FixedUpdate()
 	{
 		movementX = Input.GetAxis("Horizontal");
 		RealisticGravity();
@@ -33,7 +33,13 @@ public class PlayerControl : MonoBehaviour
 		IsPlayerOnGrounded();
 		
 		Vector3 movement = new Vector3(movementX,0f,0f);
-		_rb.AddForce(movement * (_speed));
+		//_rb.AddForce(movement * (_speed));
+		_rb.MovePosition(movement * (_speed * Time.fixedDeltaTime));
+	}
+
+	void Update()
+	{
+		
 		// if (Input.GetKey("right"))
 		// {
 		// 	transform.Translate(transform.TransformDirection(transform.right * (_speed * Time.deltaTime)), Space.World);
