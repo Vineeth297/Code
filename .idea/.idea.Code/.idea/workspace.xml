@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="No Progress">
-      <change afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerRotationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerRotationControl.cs" afterDir="false" />
-    </list>
+    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Rotating the cube&#10;But snapping position must be adjusted" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +145,8 @@
     <MESSAGE value="l" />
     <MESSAGE value="sd" />
     <MESSAGE value="No Progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="No Progress" />
+    <MESSAGE value="Rotating the cube&#10;But snapping position must be adjusted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rotating the cube&#10;But snapping position must be adjusted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="823" y="402" key="#Notifications" timestamp="1641845009748">
