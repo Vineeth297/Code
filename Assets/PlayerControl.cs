@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
 
 	public bool isGrounded;
 
-	private float horizontalAxis;
+	[HideInInspector] public float horizontalAxis;
 
 	private float lastYPosition;
 
@@ -43,14 +43,7 @@ public class PlayerControl : MonoBehaviour
 		movement = movement.normalized * (_speed * Time.deltaTime);
 		_rb.MovePosition(transform.position + movement);
 		
-		if (isGrounded)
-		{
-			if (Input.GetKeyDown("up"))
-			{
-				_rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-				isGrounded = false;
-			}
-		}
+		
 		
 		RealisticGravity();
 	}
@@ -58,17 +51,31 @@ public class PlayerControl : MonoBehaviour
 	void Update()	 	
 	{
 		IsPlayerOnGrounded();
+		if (isGrounded)
+		{
+			print("here");
+			if (Input.GetKeyDown("up"))
+			{
+				print("Jump");
+				_rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+				isGrounded = false;
+			}
+		}
 		//PerfectLanding();
 	}
 
 	void IsPlayerOnGrounded()
 	{
-		if (Math.Abs(lastYPosition - transform.position.y) < 0.01f)
-		{
+		Vector3 rayOrigin = transform.position ;
+		Ray ray = new Ray(rayOrigin, Vector3.down);
+		if (Physics.Raycast(ray, out var hit, 0.6f))
+		{ 
 			isGrounded = true;
-			_rb.velocity = Vector3.zero;
-			lastYPosition = transform.position.y;
+			Debug.DrawLine(rayOrigin, hit.point);
 		}
+		else
+			isGrounded = false;
+		
 	}
 
 	void RealisticGravity()
