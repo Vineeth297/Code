@@ -12,8 +12,7 @@ public class PlayerRotationControl : MonoBehaviour
     
     void Start()
     {
-        _playerControl = PlayerControl._playerControl;
-       // print(_playerControl);
+	    _playerControl = PlayerControl._playerControl;
     }
     void Update()
 	{
@@ -37,11 +36,12 @@ public class PlayerRotationControl : MonoBehaviour
             if (Physics.Raycast(ray, out var hit, _distanceToCheck))
             {
 				Vector3 closestPoint = hit.collider.ClosestPoint(transform.position);
-                print("CLosest " + closestPoint);
+               // print("CLosest " + closestPoint);
                 Vector3 snappingPosition = new Vector3(hit.point.x,closestPoint.y + _offset,hit.point.z);
-                print("snapped to " + snappingPosition);
-				transform.position = Vector3.Lerp(closestPoint, snappingPosition + (Vector3.up * 0.5f), 0.1f);
+                //print("snapped to " + snappingPosition);
+				transform.position = Vector3.Lerp(closestPoint, snappingPosition + (Vector3.up * 0.5f), 0.5f);
 				transform.rotation = Quaternion.Euler(0f,0f,0f);
+				print(transform.position);
                 Debug.DrawLine(transform.position + (Vector3.down * 0.5f), hit.point);
             }
         }
