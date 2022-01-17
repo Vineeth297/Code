@@ -14,6 +14,7 @@ public class Patroller : MonoBehaviour
 	
 	[Range(-60, 60)]
 	[SerializeField] private float angle,speed;
+	[SerializeField] private float rotationSpeed;
 
 	public bool once;
 	
@@ -29,6 +30,8 @@ public class Patroller : MonoBehaviour
 		{
 			transform.position = Vector3.MoveTowards(transform.position,
 				patrolPoints[currentPatrolIndex].position, speed * Time.deltaTime);
+			
+			//fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y, 1f);
 			
 		}
 		else if(!once)
@@ -50,11 +53,22 @@ public class Patroller : MonoBehaviour
 
 	private void FieldOFView()
 	{
-		
-		
-		
-		fieldOfView.transform.rotation = Quaternion.Euler(new Vector3(Mathf.PingPong(Time.deltaTime * angle , 90) - 45,fieldOfView.transform.rotation.y + 90,fieldOfView.transform.rotation.z + 90));
-		
+		if (currentPatrolIndex == 0)
+		{
+			fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z + angle * rotationSpeed);
+			//fieldOfView.transform.Rotate(new Vector3(fieldOfView.transform.rotation.x, fieldOfView.transform.rotation.y ,fieldOfView.transform.rotation.z - angle * Time.deltaTime));
+			angle += Time.deltaTime;
+			print("Plus "+ (fieldOfView.transform.rotation.z + angle));
+
+		}
+		else
+		{
+			//fieldOfView.transform.Rotate(new Vector3(fieldOfView.transform.rotation.x, fieldOfView.transform.rotation.y ,fieldOfView.transform.rotation.z +  angle * Time.deltaTime));
+			fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z - angle * rotationSpeed);
+			angle -= Time.deltaTime;
+			print("Minus " + (fieldOfView.transform.rotation.z - angle));
+		}
+
 	}
 }
 

@@ -20,18 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Rotating the cube&#10;But snapping position must be adjusted">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Field Of View.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Field Of View.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Patroller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/plane.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/plane.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Trial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Patroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +37,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerRotationControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shader/Point Surface.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Trial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Patroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerRotationControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FunctionLibrary.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -63,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/PlayerControl.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerRotationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Trial.cs" />
         <option value="$PROJECT_DIR$/Assets/Patroller.cs" />
       </list>
     </option>
@@ -115,6 +111,7 @@
       <workItem from="1642010471740" duration="9357000" />
       <workItem from="1642319207843" duration="2094000" />
       <workItem from="1642355146980" duration="5162000" />
+      <workItem from="1642443881789" duration="3904000" />
     </task>
     <task id="LOCAL-00001" summary="Done with Curves">
       <created>1641844923996</created>
