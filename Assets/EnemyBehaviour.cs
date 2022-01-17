@@ -13,7 +13,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public int scanFrequency = 30;
     public LayerMask layers;
-
+	public LayerMask occlusionLayers;
+	public List<GameObject> Objects = new List<GameObject>();
     private Collider[] _colliders = new Collider[50];
 
     private Mesh _mesh;
@@ -28,7 +29,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Update()
     {
-        _scanTimer += Time.deltaTime;
+        _scanTimer -= Time.deltaTime;
         if (_scanTimer < 0)
         {
             _scanTimer += _scanInterval;
@@ -39,7 +40,41 @@ public class EnemyBehaviour : MonoBehaviour
     private void Scan()
     {
         _count = Physics.OverlapSphereNonAlloc(transform.position, distance, _colliders, layers, QueryTriggerInteraction.Collide);
-    }
+		
+		Objects.Clear();
+		for (int i = 0; i < _count; i++)
+		{
+			GameObject obj = _colliders[i].gameObject;
+			if (IsInSight(obj))
+			{
+				Objects.Add(obj);
+			}
+		}
+	}
+
+	private bool IsInSight(GameObject obj)
+	{
+		Vector3 origin = transform.position;
+		Vector3 destination = obj.transform.position;
+		Vector3 direction = destination - origin;
+
+		if (direction.y < 0 || direction.y > height)
+			return false;
+		
+		direction.y = 0f;
+		float deltaAngle = Vector3.Angle(direction, transform.forward);
+
+		if (deltaAngle > angle)
+			return false;
+
+		origin.y += height / 2;
+		destination.y = origin.y;
+		
+		if (Physics.Linecast(origin, destination, occlusionLayers))
+			return false;
+		
+		return true;
+	}
 
     Mesh CreateMesh()
     {
@@ -143,5 +178,11 @@ public class EnemyBehaviour : MonoBehaviour
         {    
             Gizmos.DrawSphere(_colliders[i].transform.position,1f);
         }
+
+		Gizmos.color = Color.green;
+		foreach (var obj in Objects)
+		{
+			Gizmos.DrawSphere(obj.transform.position,1f);
+		}
     }
 }
