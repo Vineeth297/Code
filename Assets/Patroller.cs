@@ -1,40 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class Patroller : MonoBehaviour
 {
-	[SerializeField] private GameObject fieldOfView;
-
+	[Header("Movement")]
 	[SerializeField] private List<Transform> patrolPoints;
 	[SerializeField] private int currentPatrolIndex;
 	
-	[Range(-60, 60)]
-	[SerializeField] private float angle,speed;
-	[SerializeField] private float rotationSpeed;
-	private Vector3 _axisToRotateAround;
+	[Range(1, 30)]
+	[SerializeField] private float speed;
 
 	public bool once;
+
+	[Header("Rotation")]
+	[SerializeField] private GameObject fieldOfView;
+	[SerializeField] private Vector3 minAngle = new Vector3(0f,45f,0f);
+	[SerializeField] private Vector3 maxAngle = new Vector3(0f,90f,0f);
+	[SerializeField] private float rotationSpeed;
+	[SerializeField] private bool reachedMaxLerp;
+	
+	private float _lerpTime = 0f;
+	private Quaternion _startRotation;
+	private Quaternion _endRotation;
 	
 	private void Start()
 	{
+		_startRotation = quaternion.Euler(minAngle);
+		_endRotation = quaternion.Euler(maxAngle);
 	}
 
-	void Update()
+	private void Update()
 	{
-		FieldOFView();
-		
-		print(fieldOfView.transform.eulerAngles.z);
-		
+		FieldOfView();
+
 		if (transform.position.x != patrolPoints[currentPatrolIndex].transform.position.x)
 		{
 			transform.position = Vector3.MoveTowards(transform.position,
 				patrolPoints[currentPatrolIndex].position, speed * Time.deltaTime);
-			
-		//	fieldOfView.transform.Rotate(_axisToRotateAround * (Time.deltaTime * rotationSpeed));
 		}
 		else if(!once)
 		{
@@ -53,31 +60,21 @@ public class Patroller : MonoBehaviour
 		once = false;
 	}
 
-	private void FieldOFView()
+	private void FieldOfView()
 	{
-
-		if (currentPatrolIndex == 0)
+		if (_lerpTime < 1f && !reachedMaxLerp)
 		{
-			fieldOfView.transform.Rotate(Vector3.back * (Time.deltaTime * rotationSpeed));
+			_lerpTime += Time.deltaTime * rotationSpeed;
+			if (_lerpTime > 1f) reachedMaxLerp = true;
 		}
 
-		if (currentPatrolIndex == 1)
+		if (reachedMaxLerp)
 		{
-			fieldOfView.transform.Rotate(Vector3.forward * (Time.deltaTime * rotationSpeed));
+			_lerpTime -= Time.deltaTime * rotationSpeed;
+			if (_lerpTime < 0f) reachedMaxLerp = false;
 		}
-		// if (currentPatrolIndex == 0)
-		// {
-		// 	fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z + angle * rotationSpeed);
-		// 	angle += Time.deltaTime;
-		// 	print("Plus "+ (fieldOfView.transform.rotation.z + angle));
-		//
-		// }
-		// else
-		// {
-		// 	fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z - angle * rotationSpeed);
-		// 	angle -= Time.deltaTime;
-		// 	print("Minus " + (fieldOfView.transform.rotation.z - angle));
-		// }
+		
+		fieldOfView.transform.rotation = Quaternion.Lerp(_startRotation,_endRotation,_lerpTime);
 	}
 }
 

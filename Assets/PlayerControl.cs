@@ -6,33 +6,33 @@ using UnityEngine.Serialization;
 
 public class PlayerControl : MonoBehaviour
 {
-	public static PlayerControl _playerControl;
+	public static PlayerControl playerControl;
 	
 	[Range(1,500)]
-	[SerializeField] private float _speed = 1f;
+	[SerializeField] private float speed = 1f;
 
 	[SerializeField] private float fallMultiplier = 0.2f;
-	[SerializeField] private float lowJumpMultipler = 2f;
-	[SerializeField] private float _jumpForce = 2f;
+	[SerializeField] private float lowJumpMultiplier = 2f;
+	[SerializeField] private float jumpForce = 2f;
 
 	public bool isGrounded;
 
 	[HideInInspector] public float horizontalAxis;
 
-	private float lastYPosition;
+	private float _lastYPosition;
 
-	[HideInInspector] public Rigidbody _rb;
+	[HideInInspector] public Rigidbody rb;
 
-	void Awake()
+	private void Awake()
 	{
-		_playerControl = this;
+		playerControl = this;
 	}
 	
 	private void Start()
 	{
 		isGrounded = true;
-		_rb = GetComponent<Rigidbody>();
-		lastYPosition = transform.position.y;
+		rb = GetComponent<Rigidbody>();
+		_lastYPosition = transform.position.y;
 	}
 
 	private void FixedUpdate()
@@ -40,31 +40,28 @@ public class PlayerControl : MonoBehaviour
 		horizontalAxis = Input.GetAxis("Horizontal");
 		
 		Vector3 movement = new Vector3(horizontalAxis,0f,0f);
-		movement = movement.normalized * (_speed * Time.deltaTime);
-		_rb.MovePosition(transform.position + movement);
-		
-		
+		movement = movement.normalized * (speed * Time.deltaTime);
+		rb.MovePosition(transform.position + movement);
 		
 		RealisticGravity();
 	}
 
-	void Update()	 	
+	private void Update()	 	
 	{
 		IsPlayerOnGrounded();
+		
 		if (isGrounded)
 		{
-			print("here");
 			if (Input.GetKeyDown("up"))
 			{
-				print("Jump");
-				_rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+				rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 				isGrounded = false;
 			}
 		}
 		//PerfectLanding();
 	}
 
-	void IsPlayerOnGrounded()
+	private void IsPlayerOnGrounded()
 	{
 		Vector3 rayOrigin = transform.position ;
 		Ray ray = new Ray(rayOrigin, Vector3.down);
@@ -75,15 +72,14 @@ public class PlayerControl : MonoBehaviour
 		}
 		else
 			isGrounded = false;
-		
 	}
 
-	void RealisticGravity()
+	private void RealisticGravity()
 	{
-		if (_rb.velocity.y < 0f)
-			_rb.velocity += Vector3.up * (Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
-		else if (_rb.velocity.y > 0f)
-			_rb.velocity += Vector3.up * (Physics.gravity.y * (lowJumpMultipler - 1) * Time.deltaTime);
+		if (rb.velocity.y < 0f)
+			rb.velocity += Vector3.up * (Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
+		else if (rb.velocity.y > 0f)
+			rb.velocity += Vector3.up * (Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
 	}
 }
 
