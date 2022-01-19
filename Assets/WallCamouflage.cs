@@ -7,21 +7,13 @@ public class WallCamouflage : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        print("Entered");
-        if (other.CompareTag("Player"))
-        {
-            print("Compared");
-            other.tag = "Hidden";
-        }
+        if (!other.CompareTag("Player")) return;
+        other.tag = "Hidden";
     }
 
     private void OnTriggerExit(Collider other)
     {
-        print("Left");
-        if (other.CompareTag("Hidden"))
-        {
-            print("Changed to player");
-            other.tag = "Player";
-        }
+        if (!other.CompareTag("Hidden")) return;
+        other.tag = "Player";
     }
 }
