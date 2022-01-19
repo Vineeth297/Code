@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Rotating the cube&#10;But snapping position must be adjusted">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="updated rotation of object&#10;need to work on rotation between two points and keep the angle of rotation consistent between patrol points.&#10;Just like lerping between two points.....">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Patroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Trial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Trial.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +157,8 @@
     <MESSAGE value="sd" />
     <MESSAGE value="No Progress" />
     <MESSAGE value="Rotating the cube&#10;But snapping position must be adjusted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rotating the cube&#10;But snapping position must be adjusted" />
+    <MESSAGE value="updated rotation of object&#10;need to work on rotation between two points and keep the angle of rotation consistent between patrol points.&#10;Just like lerping between two points....." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated rotation of object&#10;need to work on rotation between two points and keep the angle of rotation consistent between patrol points.&#10;Just like lerping between two points....." />
   </component>
   <component name="WindowStateProjectService">
     <state x="823" y="402" key="#Notifications" timestamp="1641845009748">
@@ -178,9 +174,10 @@
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1641806114901" />
     <state x="461" y="171" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1641844844037" />
-    <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog" timestamp="1642319953649">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="92" y="89" width="1736" height="863" key="VCS.FileHistoryDialog" timestamp="1642597479147">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="92" y="89" width="1736" height="863" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642597479147" />
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1642319953649" />
     <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1641844934178">
       <screen x="0" y="0" width="1920" height="1080" />
