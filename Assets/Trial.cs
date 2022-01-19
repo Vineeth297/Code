@@ -6,10 +6,27 @@ using UnityEngine;
 public class Trial : MonoBehaviour
 {
     [SerializeField] private GameObject stick;
-    [SerializeField] private float angle;
+    [SerializeField] private float turnSpeed;
+	[SerializeField] private int angle;
+	
+	private Vector3 _axisToRotateAround;
+
+	void Start()
+	{
+		_axisToRotateAround = Vector3.up;
+	}
 
     void Update()
-    {
-        stick.transform.Rotate(new Vector3(stick.transform.rotation.x, stick.transform.rotation.y + angle * Time.deltaTime,stick.transform.rotation.z));
-    }
+	{ 
+		Rotate();	
+	}
+
+	private void Rotate()
+	{
+		stick.transform.Rotate(_axisToRotateAround * (turnSpeed * Time.deltaTime));
+		angle = Mathf.FloorToInt(stick.transform.eulerAngles.y);
+		
+		if (angle == 60 || angle == 300)
+			_axisToRotateAround = -_axisToRotateAround;
+	}
 }

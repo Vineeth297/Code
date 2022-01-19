@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.285027, g: 0.37139416, b: 0.4960121, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502706, g: 0.37139422, b: 0.49601433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -268,7 +268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stick: {fileID: 419231699}
-  angle: 60
+  turnSpeed: 15
+  angle: 0
 --- !u!65 &249506606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -529,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538132501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1348313094}
@@ -978,10 +979,10 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1436098786}
   - {fileID: 538132502}
-  currentPatrolIndex: 0
+  currentPatrolIndex: 1
   angle: 0
   speed: 2
-  rotationSpeed: 15
+  rotationSpeed: 10
   once: 0
 --- !u!65 &1165483173
 BoxCollider:
@@ -1297,7 +1298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436098785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1348313094}

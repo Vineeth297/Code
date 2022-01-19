@@ -15,24 +15,26 @@ public class Patroller : MonoBehaviour
 	[Range(-60, 60)]
 	[SerializeField] private float angle,speed;
 	[SerializeField] private float rotationSpeed;
+	private Vector3 _axisToRotateAround;
 
 	public bool once;
 	
 	private void Start()
 	{
-		
 	}
 
 	void Update()
 	{
 		FieldOFView();
+		
+		print(fieldOfView.transform.eulerAngles.z);
+		
 		if (transform.position.x != patrolPoints[currentPatrolIndex].transform.position.x)
 		{
 			transform.position = Vector3.MoveTowards(transform.position,
 				patrolPoints[currentPatrolIndex].position, speed * Time.deltaTime);
 			
-			//fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y, 1f);
-			
+		//	fieldOfView.transform.Rotate(_axisToRotateAround * (Time.deltaTime * rotationSpeed));
 		}
 		else if(!once)
 		{
@@ -53,22 +55,29 @@ public class Patroller : MonoBehaviour
 
 	private void FieldOFView()
 	{
+
 		if (currentPatrolIndex == 0)
 		{
-			fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z + angle * rotationSpeed);
-			//fieldOfView.transform.Rotate(new Vector3(fieldOfView.transform.rotation.x, fieldOfView.transform.rotation.y ,fieldOfView.transform.rotation.z - angle * Time.deltaTime));
-			angle += Time.deltaTime;
-			print("Plus "+ (fieldOfView.transform.rotation.z + angle));
-
+			fieldOfView.transform.Rotate(Vector3.back * (Time.deltaTime * rotationSpeed));
 		}
-		else
+
+		if (currentPatrolIndex == 1)
 		{
-			//fieldOfView.transform.Rotate(new Vector3(fieldOfView.transform.rotation.x, fieldOfView.transform.rotation.y ,fieldOfView.transform.rotation.z +  angle * Time.deltaTime));
-			fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z - angle * rotationSpeed);
-			angle -= Time.deltaTime;
-			print("Minus " + (fieldOfView.transform.rotation.z - angle));
+			fieldOfView.transform.Rotate(Vector3.forward * (Time.deltaTime * rotationSpeed));
 		}
-
+		// if (currentPatrolIndex == 0)
+		// {
+		// 	fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z + angle * rotationSpeed);
+		// 	angle += Time.deltaTime;
+		// 	print("Plus "+ (fieldOfView.transform.rotation.z + angle));
+		//
+		// }
+		// else
+		// {
+		// 	fieldOfView.transform.rotation = Quaternion.Euler(fieldOfView.transform.rotation.x,fieldOfView.transform.rotation.y,fieldOfView.transform.rotation.z - angle * rotationSpeed);
+		// 	angle -= Time.deltaTime;
+		// 	print("Minus " + (fieldOfView.transform.rotation.z - angle));
+		// }
 	}
 }
 
