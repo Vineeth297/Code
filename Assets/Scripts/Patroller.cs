@@ -27,6 +27,9 @@ public class Patroller : MonoBehaviour
 	private float _lerpTime = 0f;
 	private Quaternion _startRotation;
 	private Quaternion _endRotation;
+
+	[SerializeField] private bool playerLocated;
+	
 	
 	private void Start()
 	{
@@ -36,17 +39,20 @@ public class Patroller : MonoBehaviour
 
 	private void Update()
 	{
-		FieldOfView();
+		if (!playerLocated)
+		{
+			FieldOfView();
 
-		if (transform.position.x != patrolPoints[currentPatrolIndex].transform.position.x)
-		{
-			transform.position = Vector3.MoveTowards(transform.position,
-				patrolPoints[currentPatrolIndex].position, speed * Time.deltaTime);
-		}
-		else if(!once)
-		{
-			once = true;
-			StartCoroutine(Patrol());
+			if (transform.position.x != patrolPoints[currentPatrolIndex].transform.position.x)
+			{
+				transform.position = Vector3.MoveTowards(transform.position,
+					patrolPoints[currentPatrolIndex].position, speed * Time.deltaTime);
+			}
+			else if (!once)
+			{
+				once = true;
+				StartCoroutine(Patrol());
+			}
 		}
 	}
 	
