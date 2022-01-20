@@ -8,6 +8,8 @@ using UnityEngine.Serialization;
 
 public class Patroller : MonoBehaviour
 {
+	public static Patroller patroller;
+	
 	[Header("Movement")]
 	[SerializeField] private List<Transform> patrolPoints;
 	[SerializeField] private int currentPatrolIndex;
@@ -28,11 +30,20 @@ public class Patroller : MonoBehaviour
 	private Quaternion _startRotation;
 	private Quaternion _endRotation;
 
-	[SerializeField] private bool playerLocated;
-	
+	public bool playerLocated;
+
+	[SerializeField] private float followSpeed;
+	private Transform _player;
+	private Transform _locatedPlayer;
+
+	private void Awake()
+	{
+		patroller = this;
+	}
 	
 	private void Start()
 	{
+		_player = GameObject.FindGameObjectWithTag("Player").transform;
 		_startRotation = quaternion.Euler(minAngle);
 		_endRotation = quaternion.Euler(maxAngle);
 	}
@@ -42,7 +53,7 @@ public class Patroller : MonoBehaviour
 		if (!playerLocated)
 		{
 			FieldOfView();
-
+			
 			if (transform.position.x != patrolPoints[currentPatrolIndex].transform.position.x)
 			{
 				transform.position = Vector3.MoveTowards(transform.position,
@@ -53,6 +64,10 @@ public class Patroller : MonoBehaviour
 				once = true;
 				StartCoroutine(Patrol());
 			}
+		}
+		else
+		{
+			ChasePlayer();
 		}
 	}
 	
@@ -81,6 +96,17 @@ public class Patroller : MonoBehaviour
 		}
 		
 		fieldOfView.transform.rotation = Quaternion.Lerp(_startRotation,_endRotation,_lerpTime);
+	}
+
+	private void ChasePlayer()
+	{
+		_locatedPlayer = _player.gameObject.transform;
+		
+		var patrollerPosition = transform.position;
+		
+		patrollerPosition = Vector3.MoveTowards(patrollerPosition, new Vector3(_locatedPlayer.position.x,
+			patrollerPosition.y, 0f), followSpeed * Time.deltaTime);
+		transform.position = patrollerPosition;
 	}
 }
 

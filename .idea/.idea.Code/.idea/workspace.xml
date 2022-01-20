@@ -20,48 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="updated rotation of object&#10;need to work on rotation between two points and keep the angle of rotation consistent between patrol points.&#10;Just like lerping between two points.....">
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/FieldOfView.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/FieldOfView.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/barrel_Collider.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/barrel_Collider.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/plane.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/plane.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Trial.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FieldOfView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FieldOfView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FieldOfView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Patroller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Patroller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerRotationControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerRotationControl.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Trial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Trial.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WallCamouflage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WallCamouflage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/plane.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/plane.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +39,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patroller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shader/Point Surface.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patroller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FieldOfView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FunctionLibrary.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -93,8 +63,11 @@
         <option value="$PROJECT_DIR$/Assets/PlayerRotationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/WallCamouflage.cs" />
         <option value="$PROJECT_DIR$/Assets/Patroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/FieldOfView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Trial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
       </list>
     </option>
   </component>
@@ -148,6 +121,7 @@
       <workItem from="1642355146980" duration="5162000" />
       <workItem from="1642443881789" duration="3904000" />
       <workItem from="1642608369841" duration="14215000" />
+      <workItem from="1642697651487" duration="10929000" />
     </task>
     <task id="LOCAL-00001" summary="Done with Curves">
       <created>1641844923996</created>

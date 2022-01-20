@@ -18,17 +18,20 @@ public class Trial : MonoBehaviour
 	
 	public float speed = 0.5f;
 	public bool atLerpMax;
-	
+
+	private GameObject _player;
 	void Start()
 	{
-
+		_player = GameObject.FindGameObjectWithTag("Player");
 		startRot = Quaternion.Euler(startAngles);
 		endRot = Quaternion.Euler(endAngles);
 	}
 
     void Update()
 	{ 
-		Rotate();	
+		//Rotate();	
+		//stick.transform.LookAt(_player.transform);
+		
 	}
 
 	private void Rotate()

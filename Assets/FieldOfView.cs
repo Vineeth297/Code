@@ -5,6 +5,7 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
 	private Transform _parent;
+	private Vector3 _locatedPlayerPosition;
 	private void Start()
 	{
 		_parent = transform.root;
@@ -14,16 +15,11 @@ public class FieldOfView : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			print("Found Player");
+			//print("Found Player");
+			_locatedPlayerPosition = other.transform.position;
+			//print(_locatedPlayerPosition);
+			Patroller.patroller.playerLocated = true;
 		}
 	}
-
-	private IEnumerator ChasePlayer()
-	{
-		//Locate Player
-		
-		//Attack Player
-		//Chase Player
-		yield return null;
-	}
+	
 }

@@ -10,7 +10,7 @@ public class PlayerRotationControl : MonoBehaviour
     [SerializeField] private float distanceToCheck = 0.001f;
     [SerializeField] private float offset = 0.1f;
 	[SerializeField] private float angle = 45f;
-
+	
 	public void Start()
     {
 	    _playerControl = PlayerControl.playerControl;
