@@ -21,5 +21,4 @@ public class FieldOfView : MonoBehaviour
 			Patroller.patroller.playerLocated = true;
 		}
 	}
-	
 }

@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="updated rotation of object&#10;need to work on rotation between two points and keep the angle of rotation consistent between patrol points.&#10;Just like lerping between two points.....">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Detectiion_Area.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Detectiion_Area.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Detectiion_Area_Collider.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Detectiion_Area_Collider.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FieldOfView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +68,8 @@
         <option value="$PROJECT_DIR$/Assets/Patroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/FieldOfView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trial.cs" />
+        <option value="$PROJECT_DIR$/Assets/FieldOfView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
       </list>
     </option>
@@ -122,6 +125,7 @@
       <workItem from="1642443881789" duration="3904000" />
       <workItem from="1642608369841" duration="14215000" />
       <workItem from="1642697651487" duration="11077000" />
+      <workItem from="1642872429783" duration="8183000" />
     </task>
     <task id="LOCAL-00001" summary="Done with Curves">
       <created>1641844923996</created>
