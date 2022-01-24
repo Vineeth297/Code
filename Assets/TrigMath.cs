@@ -10,6 +10,8 @@ public class TrigMath : MonoBehaviour
     void Update()
     {
         var direction = new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad),0f,Mathf.Cos(angle * Mathf.Deg2Rad));
-		Debug.DrawLine(transform.position,direction * 5,Color.yellow);
+		Debug.DrawRay(transform.position,direction * 5,Color.yellow);
+		
+		
     }
 }

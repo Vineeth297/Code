@@ -41,7 +41,10 @@ public class Patroller : MonoBehaviour
 
 	[Header("Attack Attributes")] 
 	[SerializeField] private GameObject projectile;
-	[SerializeField] private float projectileSpeed;
+	//[SerializeField] private float projectileSpeed;
+
+	private float _timeBetweenShots;
+	[SerializeField] private float startTimeToShoot;
 	
 	
 	private void Awake()
@@ -134,20 +137,18 @@ public class Patroller : MonoBehaviour
 		
 		if (!Physics.Raycast(ray, out var hit, 20f)) return;
 
-		StartCoroutine(routine: HitPlayer(hit.point));
+		if (_timeBetweenShots < 0)
+		{
+			GameObject obj = Instantiate(projectile, transform.position, transform.rotation);
+			//obj.transform.parent = transform;
+				_timeBetweenShots = startTimeToShoot;
+		}
+		else
+		{
+			_timeBetweenShots -= Time.deltaTime;
+		}
 		
 		Debug.DrawLine(fieldOfView.transform.position,hit.point);
-	}
-
-	private IEnumerator HitPlayer(Vector3 playerDirection)
-	{
-		var attackDirection = _locatedPlayer.transform.position - fieldOfView.transform.position;
-		
-		var bullet = Instantiate(projectile);
-		bullet.transform.position = fieldOfView.transform.position;
-		bullet.GetComponent<Rigidbody>().AddForce(attackDirection * projectileSpeed * Time.deltaTime,ForceMode.Impulse);
-
-		yield return new WaitForSeconds(2.5f);
 	}
 }
 
