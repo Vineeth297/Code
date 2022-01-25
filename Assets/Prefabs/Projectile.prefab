@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20670def920271c49ad96b10f1921689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectionSpeed: 5
+  projectionSpeed: 4

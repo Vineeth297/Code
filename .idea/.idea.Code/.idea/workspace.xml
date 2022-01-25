@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9687b1c2-14f0-442b-9874-45b0251c0e48" name="Default Changelist" comment="Silly COmmit">
-      <change afterPath="$PROJECT_DIR$/Assets/Projectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GuardBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GuardBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Ground_Dark.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Ground_Dark.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PlayerStealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PlayerStealth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Guard_Box.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Guard_Box.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TrigMath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TrigMath.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,16 +44,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shader/Point Surface.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TrigMath.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GuardBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FieldOfView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shader/Point Surface.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/00/a9b1414b/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DetectionArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TrigMath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerStealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FunctionLibrary.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -69,10 +76,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WallCamouflage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRotationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/FieldOfView.cs" />
-        <option value="$PROJECT_DIR$/Assets/TrigMath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Patroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/TrigMath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player_Stealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Guard_Box.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerStealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/GuardBox.cs" />
       </list>
     </option>
   </component>

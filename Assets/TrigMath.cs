@@ -12,6 +12,10 @@ public class TrigMath : MonoBehaviour
         var direction = new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad),0f,Mathf.Cos(angle * Mathf.Deg2Rad));
 		Debug.DrawRay(transform.position,direction * 5,Color.yellow);
 		
-		
-    }
+		var inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0f,Input.GetAxisRaw("Vertical")).normalized;
+		transform.Translate(inputDirection * (5 * Time.deltaTime),Space.World);
+
+		var inputAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
+		transform.eulerAngles = Vector3.up * inputAngle;
+	}
 }
