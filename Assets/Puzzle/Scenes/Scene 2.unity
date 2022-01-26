@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54654c913e8ab994da790e5454a9ae52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 8
+  image: {fileID: 2800000, guid: 952545c5174199b42ba4f269641fd8e7, type: 3}
+  gridSize: 4
 --- !u!4 &299773017
 Transform:
   m_ObjectHideFlags: 0
